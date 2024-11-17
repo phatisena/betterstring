@@ -45,6 +45,7 @@ namespace text {
     //%blockid=text_charcodeidx
     //%block="text $_str char code at $_idx"
     //%group="better string"
+    //%inlineInputMode=inline
     export function CharCodeAt(_str: string = "", _idx: number = 0) {
         return _str.charCodeAt(_idx)
     }
@@ -52,6 +53,7 @@ namespace text {
     //%blockid=text_charxor
     //%block=" xor $_ustr with key of $_kstr at $_idx"
     //%group="better string"
+    //%inlineInputMode=inline
     export function CharXor(_idx: number = 0, _ustr: string = "", _kstr: string = "") {
         return String.fromCharCode(_ustr.charCodeAt(_idx % _ustr.length) ^ _kstr.charCodeAt(_idx % _kstr.length))
     }
@@ -59,6 +61,7 @@ namespace text {
     //%blockid=text_charcoderandom
     //%block="Pick Random char code $_min to $_max"
     //%group="better string"
+    //%inlineInputMode=inline
     export function RandTxt(_min: number = 0, _max: number = 0) {
         return String.fromCharCode(randint(_min, _max))
     }
@@ -66,6 +69,7 @@ namespace text {
     //%blockid="text_baseencode"
     //%block="get base encode $_str with base level $_bval"
     //%group="better string"
+    //%inlineInputMode=inline
     export function BaseEncode(_str: string = "", _bval: number = 0) {
         let _ustr = ""
         let _c = ""
@@ -80,6 +84,7 @@ namespace text {
     //%blockid=text_basedecode
     //%block="get base decode $_str with base level $_bval"
     //%group="better string"
+    //%inlineInputMode=inline
     export function BaseDecode(_str: string = "", _bval: number = 0) {
         let _ustr = ""
         let _c = ""
@@ -103,6 +108,7 @@ namespace text {
     //%blockid=text_chesarencode
     //%block="get chesar encode $_str with key $_kv"
     //%group="better string"
+    //%inlineInputMode=inline
     export function ChesarEncode(_str: string = "", _kv: number = 0) {
         let _ustr = ""
         let _c = ""
@@ -116,6 +122,7 @@ namespace text {
     //%blockid=text_chesardecode
     //%block="get chesar decode $_str with key $_kv"
     //%group="better string"
+    //%inlineInputMode=inline
     export function ChesarDecode(_str: string = "", _kv: number = 0) {
         let _ustr = ""
         let _c = ""
@@ -129,6 +136,7 @@ namespace text {
     //%blockid=text_veginereencode
     //%block="get veginere encode $_str with key $_key"
     //%group="better string"
+    //%inlineInputMode=inline
     export function VeginereEncode(_str: string = "", _key: string = "") {
         let _ustr = ""
         let _c = ""
@@ -142,6 +150,7 @@ namespace text {
     //%blockid=text_vegineredecode
     //%block="get veginere decode $_str with key $_key"
     //%group="better string"
+    //%inlineInputMode=inline
     export function VeginereDecode(_str: string = "", _key: string = "") {
         let _ustr = ""
         let _c = ""
