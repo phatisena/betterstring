@@ -75,7 +75,7 @@ namespace text {
         let _c = ""
         let _rbv = Math.max(((_bval - 1) % anmt.length), 9) + 1
         for (let _idx = 0; _idx < _str.length; _idx++) {
-            _c = decEncode(_c.charCodeAt(0), _rbv, 0)
+            _c = decEncode(_str.charCodeAt(_idx), _rbv, 0)
             _ustr = "" + _ustr + decEncode(_c.length, _rbv, 0) + _c
         }
         return _ustr
