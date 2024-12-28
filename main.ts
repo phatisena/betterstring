@@ -1,4 +1,21 @@
 namespace text {
+
+    //%blockid=text_listtotext
+    //%block="get list $listval to text with split $onechar"
+    //%listval.shadow=variables_get listval.defl=StrNumList
+    //%group="better text"
+    //%inlineInputMode=inline
+    export function List2text(listval:(number|string)[],onechar:string=",") {
+        return listval.map(item => {
+            if (typeof item === 'string') {
+                return item
+            } else if (typeof item === 'number') {
+                return item.toString()
+            } else {
+                return "any!"
+            }
+        }).join(onechar)
+    }
     
     let anmt = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
