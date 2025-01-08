@@ -19,7 +19,7 @@ namespace text {
     
     let anmt = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-    export function decEncode(nvl: number, bvl: number, dvl: number): string {
+    function decEncode(nvl: number, bvl: number, dvl: number): string {
         let sti = ""
         let ani = nvl
         if (ani > 0) {
@@ -41,7 +41,7 @@ namespace text {
         return sti
     }
 
-    export function decDecode(tvl: string, bvl: number): number {
+    function decDecode(tvl: string, bvl: number): number {
         let stl = tvl.length
         let vld = 0
         let nvl = 0
@@ -115,7 +115,7 @@ namespace text {
             for (let _i = 0; _i < _cn; _i++) {
                 _cv = "" + _cv + _str.charAt(_idx + (_i + 1))
             }
-            _idx += _cn
+            _idx += _cn + 1
             _c = String.fromCharCode(decDecode(_cv, _rbv))
             _ustr = "" + _ustr + _c
         }
